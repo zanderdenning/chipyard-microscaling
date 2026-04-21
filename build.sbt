@@ -186,6 +186,7 @@ lazy val barf = (project in file("generators/bar-fetchers"))
 lazy val saturn = (project in file("generators/saturn"))
   .dependsOn(rocketchip, shuttle)
   .settings(libraryDependencies ++= rocketLibDeps.value)
+  .settings(libraryDependencies ++= Seq("edu.berkeley.cs" %% "chiseltest" % chiselTestVersion % "test"))
   .settings(commonSettings)
 
 lazy val constellation = (project in file("generators/constellation"))
